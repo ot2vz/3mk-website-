@@ -1,0 +1,69 @@
+# تعديل كود HTML لإضافة اللوغو بجانب العنوان
+html_with_logo = """<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حسابات عمك تاج راسك</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header img {
+            width: 50px; /* حجم اللوغو */
+            height: 50px;
+            border-radius: 50%; /* جعل الصورة دائرية */
+            margin-left: 10px;
+        }
+        h1 {
+            color: #333;
+            margin: 0;
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 10px;
+        }
+        .social-links img {
+            width: 50px; /* حجم اللوغو */
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>حسابات عمك تاج راسك</h1>
+        <img src="logo.png" alt="لوغو">
+    </div>
+
+    <div class="social-links">
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/ot2vz?igsh=Nzc3ZDYzMG92anhk" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </a>
+        <!-- Snapchat -->
+        <a href="https://snapchat.com/t/I9DxPYkh" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Snapchat_logo.svg/1200px-Snapchat_logo.svg.png" alt="Snapchat">
+        </a>
+    </div>
+</body>
+</html>
+"""
+
+# حفظ الملف النهائي
+final_html_path = "/mnt/data/index.html"
+with open(final_html_path, "w", encoding="utf-8") as file:
+    file.write(html_with_logo)
+
+final_html_path
